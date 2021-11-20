@@ -1,34 +1,31 @@
-# Obfuscated C Code is FUN!
-## Tic tac toe
+# Obfuscated C Tic tac toe
+## To compile
+`gcc prog.c -o prog`
 
+## some tips about how it works
+- There are a lot of ternary operators which are simply `(expression to be tested)?true:false` which can shorten things quickly.
+### The Y(x) Macro:
+This macro selects indecies of the board from the solution list (that nasty `"VPSTURXWVTRPQWTPX"` bit). The solutions of tic tac toe
+can be represented by a list of possible index combinations
 
-solutions for tic tac toe
-
-positions
+```positions
 0 | 1 | 2
 --+--+--
 3 | 4 | 5
 --+--+--
 6 | 7 | 8
+```
+solutions:
+- 0 1 2
+- 3 4 5
+- 6 7 8
+- 0 3 6
+- 1 4 7
+- 2 5 8
+- 0 4 8
+- 2 4 6
 
-x|o|x
--+-+-
-0x2b0x2d
 
-values
-0 = nothing
-1 = X
-2 = O
-
-solutions
-0 1 2
-3 4 5
-6 7 8
-0 3 6
-1 4 7
-2 5 8
-0 4 8
-2 4 6
 
 solutions reorganized in a compact manner
 
